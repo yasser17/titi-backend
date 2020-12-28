@@ -20,6 +20,7 @@ Route.on('/').render('welcome');
 
 Route.post('login', 'LoginController.store');
 Route.post('login-with-social-networking', 'LoginSnController.store');
+Route.post('register', 'RegisterController.store');
 
 Route.group(() => {
 	Route.get('me', 'LoginController.me');
