@@ -24,4 +24,6 @@ Route.post('register', 'RegisterController.store');
 
 Route.group(() => {
 	Route.get('me', 'LoginController.me');
+
+	Route.get('company-categories', 'CompanyCategoryController.index');
 }).middleware(['auth']);

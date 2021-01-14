@@ -5,6 +5,12 @@ class CompanySchema extends Schema {
 	up() {
 		this.create('companies', (table) => {
 			table.increments();
+			table
+				.integer('company_category_id')
+				.unsigned()
+				.notNullable()
+				.references('id')
+				.inTable('company_categories');
 			table.string('name');
 			table.string('longitude').nullable();
 			table.string('latitude').nullable();
