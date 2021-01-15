@@ -26,4 +26,6 @@ Route.group(() => {
 	Route.get('me', 'LoginController.me');
 
 	Route.get('company-categories', 'CompanyCategoryController.index');
+
+	Route.post('bussiness', 'CompanyController.store');
 }).middleware(['auth']);
