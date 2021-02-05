@@ -4,9 +4,6 @@ const User = use('App/Models/User');
 const { validateAll } = use('Validator');
 
 const Antl = use('Antl');
-
-const moment = require('moment');
-
 class RegisterController {
 	async store({ request, auth, response }) {
 		const rules = {

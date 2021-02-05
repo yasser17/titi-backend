@@ -22,10 +22,10 @@ Route.post('login', 'LoginController.store');
 Route.post('login-with-social-networking', 'LoginSnController.store');
 Route.post('register', 'RegisterController.store');
 
+Route.get('company-categories', 'CompanyCategoryController.index');
+
 Route.group(() => {
 	Route.get('me', 'LoginController.me');
-
-	Route.get('company-categories', 'CompanyCategoryController.index');
 
 	Route.post('bussiness', 'CompanyController.store');
 }).middleware(['auth']);
